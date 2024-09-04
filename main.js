@@ -25,13 +25,17 @@ $(document).ready(function () {
         var scrollTop = $(window).scrollTop();
         var button = $('#scrollToTop');
 
-        if (scrollTop > 100) { 
+        if (scrollTop > 100) {
             button.css('opacity', 1);
         } else {
-            button.css('opacity', 0); 
+            button.css('opacity', 0);
         }
     }
     $('#scrollToTop').on('click', function () {
-        $('html, body').animate({ scrollTop: 0 }, 'slow');
+        $('html, body').animate({
+            scrollTop: '0px'
+        },
+            150);
+
     });
 });
