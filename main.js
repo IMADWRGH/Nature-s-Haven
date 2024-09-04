@@ -14,3 +14,24 @@ navlink.forEach(link => {
     })
 })
 
+
+$(document).ready(function () {
+    toggleButtonVisibility();
+    $(window).on('scroll', function () {
+        toggleButtonVisibility();
+    });
+
+    function toggleButtonVisibility() {
+        var scrollTop = $(window).scrollTop();
+        var button = $('#scrollToTop');
+
+        if (scrollTop > 100) { 
+            button.css('opacity', 1);
+        } else {
+            button.css('opacity', 0); 
+        }
+    }
+    $('#scrollToTop').on('click', function () {
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+    });
+});
