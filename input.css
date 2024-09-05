@@ -59,3 +59,7 @@ h3 {
     @apply font-Lobster text-yellow-500;
 
 }
+
+.popular_card:hover img{
+    @apply -top-8;
+}
